@@ -1,0 +1,61 @@
+//select()  selectAll()
+//append()  text()
+d3.selectAll("li").text((d)=>{
+  d="item";
+  return d;
+  console.log(d)//d是要与li绑定的值，可以自己设定
+//  return "list item"
+})
+
+//data()  enter()搭配使用
+d3.select("ul").selectAll("li").data(dataset).enter().append("li").text("New item")
+ //ul存在，li不存在 类似选择父代生成不存在的li
+
+ const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+d3.select("body").selectAll("h2")
+  .data(dataset)
+  .enter()
+  .append("h2")
+  .text((d) => {
+    console.log(d)//此处的d是dataset[i]
+   return  d + " USD"
+     })
+
+
+attr("prototype","value")
+attr("fill","colorvalue")//颜色
+style("color","colorvalue")//不管用？
+
+SvgHeight - eleheight（y）
+
+//d3.scaleLinear()
+scale.domain()//域 x轴?   [0,411]
+scale.range() //范围 y轴?  [470,30]
+scale(411)  //30
+d3.min(dataset,(d)=>d[0])//最小
+d3.max()
+
+
+//制作矩形图标bar
+<style>
+  .bar {
+    width: 25px;
+    height: 100px;
+    margin-right:2px;//间隔
+    display: inline-block;
+    background-color: blue;
+  }
+</style>
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+    d3.select("body").selectAll("div")
+      .data(dataset)
+      .enter()
+      .append("div")
+      .attr("class", "bar")
+      // Add your code below this line
+      .style("height", (d) => (d*10 + "px"))//不同高度
+  </script>
+</body>

@@ -1,0 +1,145 @@
+<html>
+<style>
+  #container{width:300px;height: 200px;}
+</style>
+<body>
+  <input type="number" password />
+  <div style="background:red;width:150px;height:100px;position:relative">
+
+  <text id="text" style="position:absolute;top:50%;left:10%;width:80%;margin-top:-25px;height:50px;;word-wrap:break-word">
+    hhhhhhhhhhhhhhhhhhh灌灌灌灌灌过过过过过过过过过过过过过过过过过过过过hhhhh</text>
+  </div>
+  <div>
+    jjjjj
+  </div>
+  <button id="versionShow">click</button>
+  <div id="container">
+
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=ea82203aaf82610a30c99cf0527af7ee"></script>
+<script>
+
+$(function() {
+  var map = new AMap.Map('container',{
+    zoom: 10, //设置地图的缩放级别
+});
+map.setMapStyle('amap://styles/905843a9e618f8e6bd0d9877e56e0922');
+})
+
+var colums=[
+  {
+  title:"hhh",
+  name:'kkk'
+  },
+  {
+  title:"iii",
+  name:'mmm'
+}]
+
+var temp = JSON.stringify(colums).replace(/title/g,'xiaojie')
+console.log(colums[0].title)
+console.log(JSON.parse(temp))
+
+// var temparr = colums.map(function(item){
+//
+// })
+//   setInterval(function(){
+//     $("#text").append("<p>jjjjjjjjj</p>")
+//   },1000)
+// })
+//   var url = "http://www.runoob.com/jquery/misc-trim.html?channelid=12333&name=xiaoming&age=23"
+//   var arr = url.split("?");
+//   if(arr[0] = ""){
+//     console.log("")
+//   }
+//   console.log(arr)
+//   var arr1 = arr[1].split("&");
+//   var obj ={}
+//   for( var i=0;i<arr1.length;i++){
+//     var arrobj=arr1[i].split("=");
+//     obj[arrobj[0]]=arrobj[1]
+//   }
+//   var div = document.getElementsByTagName("div");
+//   div[0].style.setProperty(
+//     'width',"300px"
+//   )
+//   console.log()
+//   console.log(obj)
+//
+//
+//   function Foo()
+// {
+//   var getName=function(){
+//     console.log(1)
+//   }
+//   return this;
+// }
+// Foo.getName = function(){
+//   console.log(2)
+// }
+// Foo.prototype.getName=function(){
+//   console.log(3)
+// }
+// var getName = function(){
+//   console.log(4)
+// }
+// function getName(){
+//   console.log(5)
+// }
+// hasOwnProperty
+// console.log(Foo)
+// console.log(getName)
+// console.log(Foo.getName)
+// console.log(Foo().getName)
+// Foo().getName();
+// getName();
+// Foo();
+// getName();
+// new Foo().getName();
+// new new Foo().getName()
+//
+//
+// var F=function(){};
+//
+// Object.prototype.a=function(){
+//
+// console.log('a()')
+//
+// };
+//
+// Function.prototype.b=function(){
+//
+// console.log('b()')
+//
+// }
+//
+// var clock, clockHas = false;
+// $("#versionShow").click(function() {
+// 	if (clockHas) {
+// 		clearTimeout(clock);
+// 		return;
+// 	}
+// 	clickFlag = true;
+// 	clock = setTimeInteval(function() {
+//     console.log("1")
+// 		clickFlag = false;
+// 	}, 1000)
+// })
+//
+// var f=new F();
+// console.log(f.__proto__ === F.prototype)
+// console.log(F.prototype.__proto__)
+// console.log(F.__proto__)
+// console.log(Object.__proto__ === Function.prototype)
+// console.log(Object.__proto__ ==Object.prototype.constructor.__proto__)
+// // f.a()//a()
+// //
+// // f.b()//报错找不到b这个函数
+// //
+// // F.a()//a()
+// //
+// // F.b()//b()
+</script>
+</body>
+</html>
